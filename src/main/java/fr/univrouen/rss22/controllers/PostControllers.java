@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.univrouen.rss22.model.Item;
 import fr.univrouen.rss22.model.TestRSS;
 
 @RestController
@@ -25,4 +26,13 @@ public class PostControllers {
 		TestRSS rss = new TestRSS();
 		return rss.loadFileXML();
 	}
-}
+	
+	@RequestMapping(value = "/xml", produces = MediaType.APPLICATION_XML_VALUE)
+	public @ResponseBody Item getXML() {
+		Item it = new Item("12345678","Test item","2022-05-01T11:22:33");
+		return it;
+		}
+	
+
+	}
+
