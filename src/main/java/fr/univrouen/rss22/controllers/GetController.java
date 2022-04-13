@@ -1,9 +1,17 @@
 package fr.univrouen.rss22.controllers;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class GetController {
@@ -24,6 +32,8 @@ public class GetController {
 		return "Test:\nguid="+t1+"\ntitre:"+t2;
 		
 	}
+	
+	
 	
 	
 }
